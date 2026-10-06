@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taklifnoma">
+  <meta property="og:description" content="Nikoh to'yiga taklifnoma — Umarjon va Madina">
+
+  <meta property="og:image" content="https://nikoh-taklifnoma-2026.netlify.app/wedding/prew.jpg">
+
+  <meta property="og:url" content="https://nikoh-taklifnoma-2026.netlify.app/wedding/">
+
+  <meta property="og:site_name" content="Taklifnoma">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taklifnoma">
+  <meta name="twitter:description" content="Nikoh to'yiga taklifnoma — Umarjon va Madina">
+  <meta name="twitter:image" content="https://nikoh-taklifnoma-2026.netlify.app/wedding/prew.jpg">
+
+  <title>Umarjon & Madina — To'y Taklifnomasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Cinzel:wght@400;500;600&family=Ovo&display=swap"
+    rel="stylesheet">
+  <style>
+    /* GT Super Display — оригинальный шрифт, замена на Ovo с похожими характеристиками */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    :root {
+      --cream: #f9f0e0;
+      --cream-2: #f6f1e8;
+      --gold: #a67d2b;
+      --gold-2: #b48c3d;
+      --brown: #6c513f;
+      --brown-2: #846f61;
+      --wine: #5a0f1b;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: "Ovo", Georgia, serif;
+      color: var(--brown);
+      background: var(--cream);
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream)
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 3px
+    }
+
+    .sg {
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+      background: var(--cream);
+      min-height: 100vh
+    }
+
+    /* ===== REVEAL ON SCROLL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(var(--rv-dist, 40px));
+      transition: opacity var(--rv-dur, 2s) ease var(--rv-delay, 0s), transform var(--rv-dur, 2s) cubic-bezier(0.22, 0.61, 0.36, 1) var(--rv-delay, 0s);
+      will-change: opacity, transform;
+    }
+
+    .reveal--fade {
+      --rv-dur: 2s;
+      transform: none
+    }
+
+    .reveal--up {
+      --rv-dur: 2s;
+      --rv-dist: 40px
+    }
+
+    .reveal--zoom {
+      --rv-dur: 1.5s;
+      transform: scale(0.9)
+    }
+
+    .reveal--left {
+      --rv-dur: 1.5s;
+      transform: translateX(-100px)
+    }
+
+    .reveal--right {
+      --rv-dur: 1.5s;
+      transform: translateX(100px)
+    }
+
+    .reveal.is-in {
+      opacity: 1;
+      transform: none
+    }
+
+    .sg-hero .reveal {
+      transition: opacity 0.3s ease !important;
+      transform: none !important;
+    }
+
+    /* ===== COVER OVERLAY ===== */
+    .sg-cover {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      color: var(--brown);
+      overflow: hidden;
+      cursor: pointer;
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .sg-cover.hidden {
+      opacity: 0;
+      transform: scale(1.05);
+      pointer-events: none
+    }
+
+    .sg-cover__env {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      line-height: 0;
+      padding: 0 24px
+    }
+
+    .sg-cover__art {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: opacity 700ms ease 150ms, filter 700ms ease 150ms;
+      will-change: opacity, filter;
+    }
+
+    .sg-cover__glow {
+      position: absolute;
+      left: 49.7%;
+      top: 51.1%;
+      width: 60%;
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%) scale(0.4);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217, 180, 117, 0.9) 0%, rgba(217, 180, 117, 0.4) 38%, transparent 70%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 750ms ease-out, transform 900ms ease-out;
+      will-change: opacity, transform;
+    }
+
+    .sg-cover__seal {
+      position: absolute;
+      left: 49.7%;
+      top: 51.1%;
+      width: 22%;
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 40% 34%, #5f1416 0%, #4a0d0f 52%, #3b0305 100%);
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.45);
+      line-height: 1;
+      pointer-events: none;
+      transition: transform 480ms cubic-bezier(0.34, 0, 0.64, 1), opacity 380ms ease-in 120ms;
+      will-change: transform, opacity;
+    }
+
+    .sg-cover.opening .sg-cover__glow {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.6)
+    }
+
+    .sg-cover.opening .sg-cover__seal {
+      transform: translate(-50%, -50%) scale(1.18) translateY(-4%)
+    }
+
+    .sg-cover.opening .sg-cover__art {
+      opacity: 0.9;
+      filter: brightness(1.2)
+    }
+
+    .sg-cover.opening .sg-tap {
+      opacity: 0;
+      transition: opacity 250ms ease
+    }
+
+    .sg-cover__mono {
+      font-family: "Beau Rivage", cursive;
+      font-size: clamp(15px, 5.2vw, 34px);
+      color: #d9b475;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
+    }
+
+    .sg-cover__amp {
+      font-size: 0.62em;
+      margin: 0 0.06em;
+      opacity: 0.9
+    }
+
+    .sg-tap {
+      position: absolute;
+      left: 50%;
+      bottom: 30%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-family: "Ovo", serif;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brown-2);
+      white-space: nowrap;
+    }
+
+    .sg-tap__chevron {
+      width: 10px;
+      height: 10px;
+      border-top: 1.5px solid var(--brown-2);
+      border-left: 1.5px solid var(--brown-2);
+      transform: rotate(45deg);
+      animation: sg-chevron-drift 1.8s ease-in-out infinite;
+    }
+
+    @keyframes sg-chevron-drift {
+
+      0%,
+      100% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 0.55
+      }
+
+      50% {
+        transform: rotate(45deg) translateY(-4px);
+        opacity: 1
+      }
+    }
+
+    /* ===== HERO ===== */
+    .sg-hero {
+      position: relative;
+      min-height: 92vh;
+      min-height: 92dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .sg-hero__media {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .sg-swans {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sg-swans video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sg-hero__veil {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(45, 32, 22, 0.45) 0%, rgba(45, 32, 22, 0.2) 45%, rgba(45, 32, 22, 0.6) 100%);
+    }
+
+    .sg-petals {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none
+    }
+
+    .sg-petal {
+      position: absolute;
+      top: -8%;
+      width: var(--sz);
+      height: auto;
+      opacity: 0;
+      animation: sg-fall var(--dur) linear var(--delay) infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes sg-fall {
+      0% {
+        transform: translate3d(0, -10%, 0) rotate(0deg);
+        opacity: 0
+      }
+
+      8% {
+        opacity: var(--op)
+      }
+
+      100% {
+        transform: translate3d(var(--drift), 108vh, 0) rotate(var(--rot));
+        opacity: 0
+      }
+    }
+
+    .sg-hero__spray {
+      position: absolute;
+      z-index: 1;
+      width: clamp(120px, 30vw, 240px);
+      height: auto;
+      opacity: 0.92;
+      pointer-events: none;
+      filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.3));
+    }
+
+    .sg-hero__spray--l {
+      top: -2%;
+      left: -4%
+    }
+
+    .sg-hero__spray--r {
+      bottom: -2%;
+      right: -4%;
+      transform: scale(-1, -1)
+    }
+
+    .sg-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 8vh clamp(20px, 6vw, 40px);
+      color: #fff9f0;
+    }
+
+    .sg-overline {
+      font-family: "Ovo", serif;
+      font-size: 13px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: #f3e2c2;
+      margin: 0 0 10px;
+    }
+
+    .sg-names {
+      font-family: "Beau Rivage", cursive;
+      font-weight: 400;
+      font-size: clamp(52px, 17vw, 100px);
+      line-height: 0.9;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      color: var(--gold);
+      text-shadow: 0 2px 14px rgba(255, 249, 240, 0.55);
+    }
+
+    .sg-amp {
+      font-family: "Beau Rivage", serif;
+      font-size: 0.42em;
+      color: var(--gold-2);
+      margin: 4px 0;
+      letter-spacing: 0;
+    }
+
+    .sg-ornament {
+      width: clamp(140px, 46vw, 240px);
+      height: auto;
+      margin: 18px auto 14px;
+      filter: brightness(0) invert(1) opacity(0.85);
+    }
+
+    .sg-hero__tag {
+      font-family: "Beau Rivage", serif;
+      font-size: clamp(26px, 8vw, 40px);
+      color: #fff;
+      font-weight: 500;
+      text-shadow: 0 2px 12px rgba(255, 249, 240, 0.5);
+      margin: 0 0 4px;
+      letter-spacing: 0;
+    }
+
+    .sg-hero__sub {
+      font-size: clamp(15px, 4.2vw, 19px);
+      font-style: italic;
+      font-weight: 500;
+      margin: 0 0 18px;
+      color: #fff;
+    }
+
+    .sg-hero__date {
+      font-family: "Ovo", serif;
+      font-size: clamp(15px, 4vw, 19px);
+      letter-spacing: 0.12em;
+      color: #fff;
+      font-weight: 500;
+      text-shadow: 0 2px 10px rgba(255, 249, 240, 0.5);
+      margin: 0;
+    }
+
+    .sg-scroll {
+      position: absolute;
+      left: 50%;
+      bottom: 22px;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-family: "Beau Rivage", serif;
+      font-size: clamp(20px, 5.5vw, 28px);
+      color: #fff;
+      font-weight: 500;
+      text-shadow: 0 2px 10px rgba(255, 249, 240, 0.5);
+      letter-spacing: 0;
+    }
+
+    .sg-scroll__line {
+      width: 1px;
+      height: 38px;
+      background: linear-gradient(#f3e2c2, transparent);
+      animation: sg-scrolldn 2.2s ease-in-out infinite;
+      transform-origin: top;
+    }
+
+    @keyframes sg-scrolldn {
+      0% {
+        transform: scaleY(0);
+        opacity: 0
+      }
+
+      40% {
+        transform: scaleY(1);
+        opacity: 1
+      }
+
+      100% {
+        transform: scaleY(1) translateY(14px);
+        opacity: 0
+      }
+    }
+
+    /* ===== BLOCKS ===== */
+    .sg-block {
+      position: relative;
+      padding: clamp(48px, 11vw, 96px) clamp(22px, 7vw, 56px);
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .sg-h2 {
+      font-family: "Beau Rivage", cursive;
+      font-weight: 400;
+      color: var(--gold);
+      font-size: clamp(32px, 9vw, 46px);
+      line-height: 1.35;
+      letter-spacing: 0;
+      margin: 0 0 14px;
+    }
+
+    .sg-h3 {
+      font-family: "Beau Rivage", cursive;
+      font-weight: 400;
+      color: var(--gold);
+      font-size: clamp(26px, 7vw, 38px);
+      letter-spacing: 0;
+      margin: 0 0 8px;
+    }
+
+    .sg-lead {
+      font-size: clamp(16px, 4.4vw, 20px);
+      line-height: 1.75;
+      color: var(--brown-2);
+      max-width: 40ch;
+      margin: 0 auto;
+    }
+
+    .sg-divider {
+      width: 180px;
+      max-width: 60%;
+      height: auto;
+      margin: 26px auto 0;
+      opacity: 0.85
+    }
+
+    .sg-invite {
+      background: var(--cream)
+    }
+
+    .sg-rose {
+      position: absolute;
+      width: clamp(110px, 28vw, 200px);
+      height: auto;
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sg-rose--left {
+      top: -10px;
+      left: -10px;
+      transform: rotate(-6deg)
+    }
+
+    .sg-celebrate {
+      background: var(--cream-2)
+    }
+
+    .sg-kicker {
+      font-family: "Ovo", serif;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: var(--gold);
+      margin: 0 0 10px;
+    }
+
+    .sg-bigdate {
+      font-family: "Cinzel", serif;
+      font-weight: 500;
+      font-size: clamp(24px, 7vw, 40px);
+      color: var(--brown);
+      margin: 0;
+    }
+
+    .sg-bigtime {
+      font-family: "Ovo", serif;
+      font-size: clamp(16px, 4.5vw, 21px);
+      color: var(--brown-2);
+      margin: 8px 0 0;
+    }
+
+    /* ===== COUNTDOWN ===== */
+    .sg-countdown {
+      background: var(--cream)
+    }
+
+    .sg-count__title {
+      margin-bottom: clamp(10px, 3vw, 18px)
+    }
+
+    .sg-count__row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: clamp(4px, 1.6vw, 12px);
+      max-width: 460px;
+      margin: 6px auto 0;
+    }
+
+    .sg-count__sep {
+      font-family: "Ovo", serif;
+      font-size: clamp(28px, 8vw, 46px);
+      line-height: 1;
+      color: var(--gold);
+      opacity: 0.75;
+    }
+
+    .sg-count__cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: clamp(52px, 16vw, 82px);
+    }
+
+    .sg-count__num {
+      font-family: "Ovo", serif;
+      font-weight: 400;
+      font-size: clamp(34px, 11vw, 58px);
+      color: var(--gold);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      animation: sg-ink 0.45s cubic-bezier(0.4, 0, 0.2, 1) both, sg-candle 4.5s ease-in-out 0.45s infinite;
+    }
+
+    @keyframes sg-ink {
+      from {
+        opacity: 0;
+        transform: translateY(8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes sg-candle {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      45% {
+        opacity: 0.82
+      }
+    }
+
+    .sg-count__lbl {
+      font-family: "Ovo", serif;
+      font-size: clamp(11px, 3vw, 15px);
+      letter-spacing: 0.04em;
+      color: var(--brown-2);
+    }
+
+    /* ===== SCHEDULE ===== */
+    .sg-schedule {
+      background: var(--cream-2)
+    }
+
+    .sg-corner-vine {
+      position: absolute;
+      top: -8px;
+      right: -6px;
+      width: clamp(90px, 24vw, 150px);
+      height: auto;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .sg-sched__flourish {
+      position: absolute;
+      bottom: 6%;
+      width: clamp(70px, 18vw, 130px);
+      height: auto;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .sg-sched__flourish--l {
+      left: -2%
+    }
+
+    .sg-sched__flourish--r {
+      right: -2%;
+      transform: scaleX(-1)
+    }
+
+    .sg-sched__wrap {
+      position: relative;
+      max-width: 380px;
+      margin: 0 auto
+    }
+
+    .sg-sched__wrap::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      bottom: 28px;
+      left: 84px;
+      width: 1px;
+      background: rgba(166, 125, 43, 0.25);
+    }
+
+    .sg-sched__rose {
+      position: absolute;
+      left: 84px;
+      top: 0;
+      width: 46px;
+      height: auto;
+      transform: translate(-50%, 0);
+      z-index: 2;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    .sg-sched__list {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 380px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sg-sched__row {
+      display: grid;
+      grid-template-columns: 64px 16px 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(166, 125, 43, 0.25);
+      text-align: left;
+    }
+
+    .sg-sched__row:last-child {
+      border-bottom: none
+    }
+
+    .sg-sched__time {
+      font-family: "Ovo", serif;
+      color: var(--brown-2);
+      font-size: clamp(18px, 5vw, 26px);
+      letter-spacing: 0.02em;
+    }
+
+    .sg-sched__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold-2);
+      justify-self: center;
+    }
+
+    .sg-sched__title {
+      font-size: clamp(15px, 4.2vw, 18px);
+      color: var(--brown);
+    }
+
+    /* ===== LOCATION ===== */
+    .sg-location {
+      background: var(--cream);
+      max-width: 1040px
+    }
+
+    .sg-location__grid {
+      display: grid;
+      gap: clamp(20px, 5vw, 48px);
+      align-items: center;
+    }
+
+    .sg-venue {
+      width: min(78vw, 420px);
+      height: auto;
+      margin: 0 auto;
+      filter: drop-shadow(0 14px 30px rgba(108, 81, 63, 0.2));
+    }
+
+    .sg-acomm {
+      width: clamp(120px, 36vw, 180px);
+      height: auto;
+      margin: 0 auto 16px;
+      opacity: 0.85;
+    }
+
+    .sg-place {
+      font-family: "Ovo", serif;
+      font-size: clamp(18px, 5vw, 24px);
+      color: var(--brown);
+      margin: 0 0 6px;
+    }
+
+    .sg-address {
+      font-size: clamp(15px, 4vw, 17px);
+      color: var(--brown-2);
+      line-height: 1.6;
+      margin: 0 auto 22px;
+      max-width: 32ch;
+    }
+
+    .sg-btn {
+      display: inline-block;
+      padding: 13px 32px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      background: transparent;
+      color: var(--gold);
+      font-family: "Cinzel", serif;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .sg-btn:hover {
+      background: var(--gold);
+      color: var(--cream)
+    }
+
+    .sg-map {
+      position: relative;
+      width: min(80vw, 400px);
+      aspect-ratio: 1/1;
+      margin: clamp(28px, 6vw, 44px) auto 0;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(108, 81, 63, 0.2);
+    }
+
+    .sg-map iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    .sg-map__frame {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* ===== NOTES ===== */
+    .sg-notes {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream-2);
+      background-image: url('images/ornament.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: grid;
+      gap: clamp(28px, 7vw, 48px);
+      max-width: 880px;
+    }
+
+    .sg-notes__rose {
+      position: absolute;
+      bottom: 6%;
+      left: -8%;
+      width: 30%;
+      max-width: 140px;
+      height: auto;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .sg-note p {
+      font-size: clamp(15px, 4vw, 17px);
+      line-height: 1.65;
+      color: var(--brown-2);
+      margin: 0 auto;
+      max-width: 34ch;
+    }
+
+    /* ===== RSVP ===== */
+    .sg-rsvp {
+      background: var(--cream);
+      position: relative;
+      overflow: hidden
+    }
+
+    .sg-rsvp__corner {
+      position: absolute;
+      top: 0;
+      width: clamp(90px, 24vw, 150px);
+      height: auto;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .sg-rsvp__corner--l {
+      left: 0
+    }
+
+    .sg-rsvp__corner--r {
+      right: 0;
+      transform: scaleX(-1)
+    }
+
+    .sg-rsvp__seal {
+      width: clamp(86px, 24vw, 128px);
+      height: auto;
+      margin: 0 auto 18px;
+      filter: drop-shadow(0 10px 22px rgba(90, 15, 27, 0.3));
+    }
+
+    .sg-rsvp__by {
+      font-family: "Cinzel", serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: clamp(12px, 3.4vw, 15px);
+      color: var(--gold);
+      margin: 20px 0 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .sg-footer {
+      position: relative;
+      text-align: center;
+      padding: clamp(56px, 13vw, 96px) 24px clamp(64px, 16vw, 104px);
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    .sg-peony {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(120px, 34vw, 200px);
+      height: auto;
+      opacity: 0.4;
+      pointer-events: none;
+      animation: sg-breathe 7s ease-in-out infinite;
+    }
+
+    @keyframes sg-breathe {
+
+      0%,
+      100% {
+        transform: translateX(-50%) scale(1) rotate(0deg)
+      }
+
+      50% {
+        transform: translateX(-50%) scale(1.06) rotate(2deg)
+      }
+    }
+
+    .sg-footer .sg-ornament {
+      filter: none;
+      opacity: 0.7;
+      position: relative;
+      z-index: 1
+    }
+
+    .sg-footer__hint {
+      position: relative;
+      z-index: 1;
+      font-family: "Ovo", serif;
+      font-style: italic;
+      color: var(--brown-2);
+      margin: 0;
+    }
+
+    .sg-footer__photo {
+      position: relative;
+      z-index: 1;
+      margin: 18px auto 22px;
+      width: min(80vw, 380px);
+    }
+
+    .sg-footer__photo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 18px 44px rgba(108, 81, 63, 0.28);
+    }
+
+    .sg-footer__names {
+      position: relative;
+      z-index: 1;
+      font-family: "Beau Rivage", cursive;
+      font-size: clamp(34px, 10vw, 56px);
+      color: var(--gold);
+      letter-spacing: 0;
+      margin: 8px 0 6px;
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .sg-petals {
+        display: none
+      }
+
+      .sg-peony,
+      .sg-scroll__line,
+      .sg-tap__chevron,
+      .sg-count__num {
+        animation: none
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important
+      }
+    }
+
+    /* ===== RSVP MODAL ===== */
+    .rsvp-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(45, 32, 22, 0.85);
+      backdrop-filter: blur(4px);
+      animation: modal-fadein 0.3s ease;
+    }
+
+    .rsvp-modal.active {
+      display: flex
+    }
+
+    @keyframes modal-fadein {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .rsvp-modal__content {
+      position: relative;
+      width: 90%;
+      max-width: 480px;
+      background: var(--cream);
+      border-radius: 12px;
+      padding: clamp(32px, 8vw, 48px) clamp(24px, 6vw, 40px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      animation: modal-slidein 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes modal-slidein {
+      from {
+        transform: translateY(40px) scale(0.95);
+        opacity: 0
+      }
+
+      to {
+        transform: none;
+        opacity: 1
+      }
+    }
+
+    .rsvp-modal__close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: none;
+      color: var(--brown-2);
+      font-size: 24px;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .rsvp-modal__close:hover {
+      color: var(--wine)
+    }
+
+    .rsvp-modal__title {
+      font-family: "Beau Rivage", cursive;
+      font-size: clamp(28px, 8vw, 40px);
+      color: var(--gold);
+      margin: 0 0 8px;
+      text-align: center;
+    }
+
+    .rsvp-modal__subtitle {
+      font-size: 15px;
+      color: var(--brown-2);
+      text-align: center;
+      margin: 0 0 28px;
+      line-height: 1.6;
+    }
+
+    .rsvp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .rsvp-form__group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .rsvp-form__label {
+      font-family: "Ovo", serif;
+      font-size: 14px;
+      color: var(--brown);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .rsvp-form__input,
+    .rsvp-form__textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(166, 125, 43, 0.3);
+      border-radius: 6px;
+      background: var(--cream-2);
+      color: var(--brown);
+      font-family: "Ovo", serif;
+      font-size: 15px;
+      transition: border-color 0.2s ease;
+    }
+
+    .rsvp-form__input:focus,
+    .rsvp-form__textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .rsvp-form__textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .rsvp-form__radio-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .rsvp-form__radio {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .rsvp-form__radio input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+
+    .rsvp-form__radio label {
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--brown);
+    }
+
+    .rsvp-form__submit {
+      padding: 14px 32px;
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+      background: var(--gold);
+      color: var(--cream);
+      font-family: "Cinzel", serif;
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .rsvp-form__submit:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .rsvp-form__success {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .rsvp-form__success.active {
+      display: block
+    }
+
+    .rsvp-form__success-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .rsvp-form__success-title {
+      font-family: "Beau Rivage", cursive;
+      font-size: 32px;
+      color: var(--gold);
+      margin: 0 0 12px;
+    }
+
+    .rsvp-form__success-text {
+      font-size: 16px;
+      color: var(--brown-2);
+      line-height: 1.6;
+    }
+
+    @media(min-width:768px) {
+      .sg-location__grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: left
+      }
+
+      .sg-location__text {
+        text-align: left
+      }
+
+      .sg-location .sg-address {
+        margin-left: 0
+      }
+
+      .sg-location .sg-acomm {
+        margin-left: 0
+      }
+
+      .sg-venue {
+        margin: 0;
+        width: 100%;
+        max-width: 460px
+      }
+
+      .sg-notes {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .sg-note p {
+        margin-left: auto;
+        margin-right: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio id="bgMusic" src="music/ordinary.mp3" preload="auto"></audio>
+
+  <div class="sg">
+
+    <!-- ===== COVER OVERLAY ===== -->
+    <div class="sg-cover" id="sgCover">
+      <div class="sg-cover__env">
+        <img class="sg-cover__art" src="images/cover-envelope.png" alt="" draggable="false">
+        <span class="sg-cover__glow" aria-hidden="true"></span>
+        <span class="sg-cover__seal" aria-hidden="true">
+          <span class="sg-cover__mono">U<span class="sg-cover__amp">&amp;</span>M</span>
+        </span>
+      </div>
+      <p class="sg-tap">
+        <span class="sg-tap__chevron" aria-hidden="true"></span>
+        Ochish uchun bosing
+      </p>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="sg-hero">
+      <div class="sg-hero__media">
+        <video class="sg-swans" src="images/swans.mov" poster="images/swannnsss.jpg" muted loop autoplay playsinline
+          preload="none" aria-hidden="true"></video>
+        <div class="sg-hero__veil"></div>
+      </div>
+
+      <!-- Petals -->
+      <div class="sg-petals" aria-hidden="true">
+        <img class="sg-petal" src="images/petal-1.png" alt="" loading="lazy"
+          style="left:74%;--sz:19px;--delay:1.5s;--dur:16s;--drift:-30px;--rot:-5deg;--op:0.59">
+        <img class="sg-petal" src="images/petal-2.png" alt="" loading="lazy"
+          style="left:35%;--sz:36px;--delay:2.8s;--dur:17s;--drift:24px;--rot:65deg;--op:0.84">
+        <img class="sg-petal" src="images/petal-3.png" alt="" loading="lazy"
+          style="left:50%;--sz:20px;--delay:4.4s;--dur:10s;--drift:5px;--rot:82deg;--op:0.58">
+        <img class="sg-petal" src="images/petal-4.png" alt="" loading="lazy"
+          style="left:15%;--sz:35px;--delay:8.9s;--dur:10s;--drift:-6px;--rot:84deg;--op:0.90">
+        <img class="sg-petal" src="images/petal-5.png" alt="" loading="lazy"
+          style="left:65%;--sz:34px;--delay:9.7s;--dur:12s;--drift:28px;--rot:87deg;--op:0.80">
+        <img class="sg-petal" src="images/petal-6.png" alt="" loading="lazy"
+          style="left:56%;--sz:32px;--delay:13.7s;--dur:15s;--drift:-27px;--rot:-77deg;--op:0.60">
+        <img class="sg-petal" src="images/petal-1.png" alt="" loading="lazy"
+          style="left:52%;--sz:17px;--delay:0.1s;--dur:12s;--drift:23px;--rot:18deg;--op:0.56">
+        <img class="sg-petal" src="images/petal-2.png" alt="" loading="lazy"
+          style="left:65%;--sz:26px;--delay:6.5s;--dur:12s;--drift:-13px;--rot:-35deg;--op:0.56">
+        <img class="sg-petal" src="images/petal-3.png" alt="" loading="lazy"
+          style="left:81%;--sz:26px;--delay:7.7s;--dur:18s;--drift:-25px;--rot:-105deg;--op:0.60">
+        <img class="sg-petal" src="images/petal-4.png" alt="" loading="lazy"
+          style="left:26%;--sz:30px;--delay:9.4s;--dur:14s;--drift:-12px;--rot:-32deg;--op:0.87">
+        <img class="sg-petal" src="images/petal-5.png" alt="" loading="lazy"
+          style="left:7%;--sz:25px;--delay:3.8s;--dur:18s;--drift:2px;--rot:31deg;--op:0.77">
+        <img class="sg-petal" src="images/petal-6.png" alt="" loading="lazy"
+          style="left:80%;--sz:18px;--delay:1.8s;--dur:15s;--drift:-40px;--rot:-5deg;--op:0.85">
+      </div>
+
+      <img class="sg-hero__spray sg-hero__spray--l" src="images/spray-left.png" alt="">
+      <img class="sg-hero__spray sg-hero__spray--r" src="images/spray-right.png" alt="">
+
+      <div class="sg-hero__content reveal reveal--fade">
+        <p class="sg-overline">To'y kuni</p>
+        <h1 class="sg-names"><span>Umarjon</span><span class="sg-amp">&amp;</span><span>Madina</span></h1>
+        <img class="sg-ornament" src="images/divider-gold.png" alt="">
+        <p class="sg-hero__tag">Ikki qalb · Bir taqdir</p>
+        <p class="sg-hero__sub">Alloh yozgan umr yo'li</p>
+        <p class="sg-hero__date">15-oktyabr, 2026 · 16:00</p>
+      </div>
+
+      <div class="sg-scroll" aria-hidden="true">
+        <span>Pastga suring</span>
+        <span class="sg-scroll__line"></span>
+      </div>
+    </section>
+
+    <!-- ===== INVITE ===== -->
+    <section class="sg-block sg-invite">
+      <img class="sg-rose sg-rose--left reveal reveal--fade" src="images/branch-rose.png" alt="" loading="lazy">
+      <div class="reveal reveal--up">
+        <h2 class="sg-h2">Aziz do'stlar va oila</h2>
+        <p class="sg-lead">Sevgi, kulgi, du'o va unutilmas xotiralar bilan to'lgan bu kechaga bizni qo'shiling —
+          umrimizning yangi sahifasini birga boshlaymiz.</p>
+        <img class="sg-divider" src="images/flourish.png" alt="">
+      </div>
+    </section>
+
+    <!-- ===== CELEBRATE ===== -->
+    <section class="sg-block sg-celebrate reveal reveal--fade">
+      <p class="sg-kicker">Tantana boshlanadi</p>
+      <p class="sg-bigdate">15-oktyabr, 2026</p>
+      <p class="sg-bigtime">16:00</p>
+    </section>
+
+    <!-- ===== COUNTDOWN ===== -->
+    <section class="sg-block sg-countdown reveal reveal--fade">
+      <h2 class="sg-h2 sg-count__title">Tantanaga qadar</h2>
+      <div class="sg-count__row">
+        <div class="sg-count__cell"><span class="sg-count__num" id="days"></span><span class="sg-count__lbl">Kun</span>
+        </div>
+        <span class="sg-count__sep">:</span>
+        <div class="sg-count__cell"><span class="sg-count__num" id="hours"></span><span
+            class="sg-count__lbl">Soat</span></div>
+        <span class="sg-count__sep">:</span>
+        <div class="sg-count__cell"><span class="sg-count__num" id="minutes"></span><span
+            class="sg-count__lbl">Daqiqa</span></div>
+        <span class="sg-count__sep">:</span>
+        <div class="sg-count__cell"><span class="sg-count__num" id="seconds"></span><span
+            class="sg-count__lbl">Soniya</span></div>
+      </div>
+    </section>
+    <script>
+      // Событие: 15 октября 2026, 16:00
+      const targetDate = new Date("2026-10-15T16:00:00+05:00").getTime()
+
+      function updateCountdown() {
+        const now = new Date().getTime()
+        const distance = targetDate - now
+
+        if (distance <= 0) {
+          document.getElementById("days").textContent = "0"
+          document.getElementById("hours").textContent = "00"
+          document.getElementById("minutes").textContent = "00"
+          document.getElementById("seconds").textContent = "00"
+          return
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
+        const minutes = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        )
+        const seconds = Math.floor(
+          (distance % (1000 * 60)) / 1000
+        )
+
+        document.getElementById("days").textContent = days
+        document.getElementById("hours").textContent = String(hours).padStart(2, "0")
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, "0")
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, "0")
+      }
+
+      updateCountdown()
+      setInterval(updateCountdown, 1000);
+    </script>
+
+    <!-- ===== SCHEDULE ===== -->
+    <section class="sg-block sg-schedule reveal reveal--up">
+      <img class="sg-corner-vine" src="images/corner-vine.png" alt="" loading="lazy">
+      <img class="sg-sched__flourish sg-sched__flourish--l" src="images/left-element.png" alt="" loading="lazy">
+      <img class="sg-sched__flourish sg-sched__flourish--r" src="images/right-element.png" alt="" loading="lazy">
+      <h2 class="sg-h2">Dastur</h2>
+      <div class="sg-sched__wrap">
+        <img class="sg-sched__rose" src="images/rose.png" alt="" aria-hidden="true" loading="lazy">
+        <ul class="sg-sched__list">
+          <li class="sg-sched__row reveal reveal--up" style="transition-delay:0ms"><span
+              class="sg-sched__time">16:00</span><span class="sg-sched__dot"></span><span
+              class="sg-sched__title">Mehmonlarni kutib olish</span></li>
+          <li class="sg-sched__row reveal reveal--up" style="transition-delay:90ms"><span
+              class="sg-sched__time">17:00</span><span class="sg-sched__dot"></span><span class="sg-sched__title">Nikoh
+              marosimi</span></li>
+          <li class="sg-sched__row reveal reveal--up" style="transition-delay:180ms"><span
+              class="sg-sched__time">18:00</span><span class="sg-sched__dot"></span><span
+              class="sg-sched__title">Ziyofat</span></li>
+          <li class="sg-sched__row reveal reveal--up" style="transition-delay:360ms"><span
+              class="sg-sched__time">19:00</span><span class="sg-sched__dot"></span><span class="sg-sched__title">Raqs
+              va musiqa</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="sg-block sg-location">
+      <div class="sg-location__grid">
+        <img class="sg-venue reveal reveal--left" src="images/venue.png" alt="Grand Emerald Hall" loading="lazy">
+        <div class="sg-location__text reveal reveal--right">
+          <img class="sg-acomm" src="images/acomm-decor.png" alt="" loading="lazy">
+          <h2 class="sg-h2">Manzil</h2>
+          <p class="sg-place">"Diyor"</p>
+          <p class="sg-address">Namangan, Pop tumani</p>
+          <a class="sg-btn"
+            href="https://yandex.uz/maps/org/diyor_to_yxonasi/67479286766/?ll=71.119373%2C40.883324&mode=search&sctx=ZAAAAAgBEAAaKAoSCZz51Rwg%2BE5AET%2F%2B0qI%2BUUVAEhIJR8Zq8%2F%2FCLkARMV9egH3EGkAiBgABAgMEBSgKOABA2ssLSAFiO3JlbGV2X3VuaXZlcnNhbF9pcnJlbF9maWx0ZXI9dW5pdmVyc2FsX2ZpbHRlcl9kYzEyMDUwMTZfZXhwYkdyZWFycj1zY2hlbWVfTG9jYWwvR2VvL1Bvc3RmaWx0ZXIvVW5pdmVyc2FsSXJyZWxGb3JtdWxhL1RocmVzaG9sZD0wLjUzN2JGcmVhcnI9c2NoZW1lX0xvY2FsL0dlby9Qb3N0ZmlsdGVyL1VuaXZlcnNhbElycmVsRm9ybXVsYS9Nb2RlPSJlbmFibGVkImoCdXqdAc3MzD2gAQCoAQC9AfDejT3CAQbu59Cw%2BwGCAhpQb3AgdHVtYW4gRGl5b3IgdG9geXhvbmFzaYoCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=71.119373%2C40.883324&sspn=0.013351%2C0.005971&text=Pop%20tuman%20Diyor%20to%60yxonasi&z=17.17"
+            target="_blank" rel="noopener">Xaritada ko'rish</a>
+        </div>
+      </div>
+      <div class="sg-map reveal reveal--up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.0!2d71.1181306!3d40.8833154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bad770e414a403%3A0x8b32cac5d3c98f51!2sDiyor%20To%27yxonasi!5e0!3m2!1sru!2suz!4v1696512000000"
+          title="Diyor" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        <img class="sg-map__frame" src="images/divider.svg" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <!-- ===== NOTES ===== -->
+
+    <!-- ===== RSVP ===== -->
+    <section class="sg-block sg-rsvp reveal reveal--zoom">
+      <img class="sg-rsvp__corner sg-rsvp__corner--l" src="images/floral-corner.png" alt="" aria-hidden="true"
+        loading="lazy">
+      <img class="sg-rsvp__corner sg-rsvp__corner--r" src="images/floral-corner.png" alt="" aria-hidden="true"
+        loading="lazy">
+      <img class="sg-rsvp__seal" src="images/rsvp-seal.png" alt="RSVP" role="button" tabindex="0" loading="lazy"
+        style="cursor:pointer" id="rsvpTrigger">
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="sg-footer reveal reveal--fade">
+        <img class="sg-peony" src="images/peony.png" alt="" loading="lazy">
+        <p class="sg-footer__hint">Sizi ko'rishni umid qilamiz!</p>
+        <figure class="sg-footer__photo reveal reveal--zoom">
+          <img src="images/maniki.jpg" alt="Abror & Madina" loading="lazy">
+        </figure>
+        <img class="sg-ornament" src="images/divider-gold.png" alt="" loading="lazy">
+        <p class="sg-footer__names">Umarjon &amp; Madina</p>
+      </footer>
+
+  </div>
+
+  <script>
+    // ===== COVER REVEAL =====
+    (function () {
+      var cover = document.getElementById('sgCover')
+      if (!cover) return
+      cover.addEventListener('click', function (e) {
+        cover.classList.add('opening')
+        setTimeout(function () { cover.classList.add('hidden') }, 900)
+        var music = document.getElementById('bgMusic')
+        if (music) {
+          music.play().catch(function () { })
+        }
+      })
+    })();
+
+    // ===== REVEAL ON SCROLL =====
+    (function () {
+      var els = document.querySelectorAll('.reveal')
+      if (!els.length) return
+      var obs = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            entries[i].target.classList.add('is-in')
+            obs.unobserve(entries[i].target)
+          }
+        }
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+      for (var i = 0; i < els.length; i++) obs.observe(els[i])
+
+      // Hero reveal — all at once from center, no stagger
+      var heroEls = document.querySelectorAll('.sg-hero .reveal')
+      for (var i = 0; i < heroEls.length; i++) {
+        (function (el) { el.classList.add('is-in') })(heroEls[i])
+      }
+    })();
+
+
+    // ===== ANIMATED ROSE (Schedule) =====
+    (function () {
+      var rose = document.querySelector('.sg-sched__rose')
+      var rows = document.querySelectorAll('.sg-sched__row')
+      if (!rose || !rows.length) return
+
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var idx = Array.from(rows).indexOf(entry.target)
+            var offset = entry.target.offsetTop + entry.target.offsetHeight / 2
+            rose.style.transform = 'translate(-50%, ' + offset + 'px)'
+          }
+        })
+      }, { threshold: 0.5 })
+
+      rows.forEach(function (row) { obs.observe(row) })
+    })();
+  </script>
+</body>
+
+</html>
